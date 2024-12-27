@@ -1,0 +1,328 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+
+import { headerData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Contact from '~/components/widgets/Contact.astro';
+import type { Input } from '~/types';
+
+const metadata = {
+  title: 'Stock Alpha',
+  ignoreTitleTemplate: true,
+};
+
+const contactInputs: Input[] = [
+  { name: 'name', type: 'text', label: 'Name', placeholder: 'Your Name' },
+  { name: 'email', type: 'email', label: 'Email', placeholder: 'Your Email' },
+  { name: 'subject', type: 'text', label: 'Subject', placeholder: 'Subject' },
+];
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: 'https://app.stockalpha.in/login',
+        },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: 'https://app.stockalpha.in/signup',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Stock Alpha"
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://app.stockalpha.in' },
+      { text: 'Learn more', href: '#features' },
+    ]}
+  >
+    <Fragment slot="title">
+      Unlock the
+      <span class="text-accent dark:text-white highlight">Power</span> of Options Trading with <span
+        class="text-accent dark:text-white highlight">Data-Driven Precision</span
+      >
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Explore Options with our <span class="font-semibold">Smart Options Explorer</span> and become a Mathematical and
+        Statistical Options Trader</span
+      >
+    </Fragment>
+
+    <Fragment slot="image">
+      <Image
+        class="mx-auto rounded-md w-full dark:hidden"
+        widths={[400, 768, 1024, 2040]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+        loading="eager"
+        objectPosition="left"
+        src="~/assets/images/hero-light.png"
+        alt="Dashboard screenshot"
+      />
+      <Image
+        class="mx-auto rounded-md w-full hidden dark:block"
+        widths={[400, 768, 1024, 2040]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+        loading="eager"
+        objectPosition="left"
+        src="~/assets/images/hero-dark.png"
+        alt="Dashboard screenshot"
+      />
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Features"
+    columns={2}
+    items={[
+      {
+        title: 'Advanced Analysis',
+        description:
+          'Leverage sophisticated mathematical and statistical models to analyze option strategies like a pro.',
+        icon: 'tabler:brand-google-big-query',
+      },
+      {
+        title: 'Real-Time Data',
+        description: 'Get up-to-the-minute insights and market data for the most accurate analysis.',
+        icon: 'tabler:timeline',
+      },
+      {
+        title: 'Customizable Scenarios',
+        description:
+          'Test your options strategies under different market conditions and time frames with our scenario builder.',
+        icon: 'tabler:pencil-plus',
+      },
+      {
+        title: 'User-Friendly Interface',
+        description: 'Trade smarter with intuitive tools designed for both beginners and experienced traders.',
+        icon: 'tabler:pointer-heart',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget **************** -->
+
+  <CallToAction
+    title="Boost your investments with a custom Momentum Portfolio"
+    subtitle="Discover proven strategies to build a momentum portfolio that rides market trends and maximizes returns."
+    actions={[{ text: 'Get Started', href: 'https://app.stockalpha.in/signup' }]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Proven Track Record of Success',
+        description:
+          'Our momentum strategies are backed by years of market research and performance analysis, helping you identify stocks with string upward trends.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Customized for Your Goals',
+        description:
+          'Build a momentum portfolio tailored to your financial goals, whether you are looking for short-term gains or long-term growth.',
+        icon: 'tabler:target-arrow',
+      },
+      {
+        title: 'Real-Time Data & Insights',
+        description:
+          'Stay ahead of the curve with live market data, trend signals and performance insights to optimize your portfolio.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Risk Management Tools',
+        description:
+          'Our platform helps you balance risk and reward, allowing you to adjust your strategy as market consitions evolve.',
+        icon: 'tabler:carousel-horizontal',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why choose us?</h3>
+    </Fragment>
+
+    <Fragment slot="image">
+      <Image
+        class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg dark:hidden"
+        width={500}
+        height={500}
+        widths={[400, 768]}
+        sizes="(max-width: 768px) 100vw, 432px"
+        layout="responsive"
+        src="~/assets/images/hero-2-light.png"
+        alt="Chart screenshot"
+      />
+      <Image
+        class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg hidden dark:block"
+        width={500}
+        height={500}
+        widths={[400, 768]}
+        sizes="(max-width: 768px) 100vw, 432px"
+        layout="responsive"
+        src="~/assets/images/hero-2-dark.png"
+        alt="Chart screenshot"
+      />
+    </Fragment>
+  </Content>
+
+  <!-- Pricing Widget ******************* -->
+
+  <Pricing
+    id="pricing"
+    title="Flexible pricing plans"
+    prices={[
+      {
+        title: 'free',
+        subtitle: 'Access to core features and a wide range of tools',
+        price: '0',
+        period: '/ month',
+        items: [
+          { description: 'Index Explorer' },
+          { description: 'MCX Explorer' },
+          { description: 'Stock Explorer' },
+          { description: 'Trend Analyser' },
+          { description: 'Paper Trade' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get Started for Free',
+          href: 'https://app.stockalpha.in/signup',
+        },
+      },
+      {
+        title: 'pro',
+        subtitle: 'Access to advanced customizations as per your needs',
+        originalPrice: 999,
+        price: 99,
+        period: '/ Month',
+        callToAction: {
+          target: '_blank',
+          text: 'Upgrade to Pro',
+          href: 'https://rzp.io/rzp/RqIwgaM',
+        },
+        items: [
+          { description: 'Filtering options for all tables' },
+          { description: 'Column-wise sorting on all tables' },
+        ],
+        hasRibbon: true,
+        ribbonTitle: 'Limited Offer',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Find frequently asked questions"
+    tagline="Get more info from FAQs"
+    columns={2}
+    items={[
+      {
+        title: 'What is StockAlpha?',
+        description:
+          'Stock Alpha is a platform designed for traders to explore and analyze options using advanced mathematical and statistical tools',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'What kind of data does Stock Alpha provide?',
+        description: `Stock Alpha empowers users with comparison of multiple trade opportunities to suit their risk profile.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'What level of trading knowledge is required to use Stock Alpha?',
+        description:
+          'While some familiarity with Futures and Options is helpful, the user-friendly interface and filter options allow those with limited experience to trade risk free. For more advanced users, Stock Alpha offers extensive customization capabilities.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Is customer support available for Stock Alpha users seeking guidance?',
+        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through the chat, email (support@stockalpha.in) or phone/whatsapp +91 6350158902, and we'll be happy to provide the help you need.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with Stock Alpha's blog"
+    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using Stock Alpha effectively for your projects.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+
+  <!-- Contact Widget **************** -->
+
+  <Contact
+    title="Send us a message"
+    subtitle="We promise to get back to you as soon as possible."
+    inputs={contactInputs}
+    textarea={{
+      name: 'message',
+      label: 'Message',
+      placeholder: 'Your Message',
+    }}
+    button="Send Message"
+    action="https://app.stockalpha.in/api/contact-form-submission"
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Contact us"
+    subtitle="We are reachable via email, phone and our social media handles. Feel free to contact us anytime."
+    items={[
+      {
+        title: 'Email us',
+        description: 'support@stockalpha.in',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Call us',
+        description: '+91 6350158902',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Follow us',
+        description: '@stockalpha.in',
+        icon: 'tabler:brand-twitter',
+      },
+    ]}
+  />
+</Layout>
