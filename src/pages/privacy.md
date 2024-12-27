@@ -3,7 +3,6 @@ title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-**Stock Alpha** is a brand powered by **Proption Fintech Private Limited**, having its registered address at 803, Classic Tower, Navaratan Complex, Bhuwana, Udaipur (Raj), 313001.<br>Contact email - proptionfintech@gmail.com
 
 ## We are committed to your privacy
 
@@ -44,6 +43,6 @@ The Company may however, disclose Your Personal Data in the good faith belief th
 
 We do not delete any information that you have provided unless you request for the deletion of your account.
 
-To delete all of your information that you have provided us, you must send an email to [support@stockalpha.in](mailto:support@stockalpha.in). Once we receive your deletion request email, your account will be reviewed for any pending payments due. If everything is cleared, we shall delete your data within 7 days.
+To delete all of your information that you have provided us, you must send an email to [AmazeAlgos@gmail.com](mailto:AmazeAlgos@gmail.com). Once we receive your deletion request email, your account will be reviewed for any pending payments due. If everything is cleared, we shall delete your data within 7 days.
 
 If you have pending payments due while requesting for deletion, you will be informed and, the deletion process will not take place till you sort out the dues and request for a deletion again after doing so.
