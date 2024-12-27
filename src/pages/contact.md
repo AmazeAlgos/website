@@ -3,17 +3,14 @@ title: 'Contact us'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-Thank you for visiting StockAlpha! We value our customers and are here to assist you with any inquiries or support you may need.
+Thank you for visiting Amazealgos! We value our customers and are here to assist you with any inquiries or support you may need.
 
-**Stock Alpha** is a brand powered by **Proption Fintech Private Limited**, having its registered address at 803, Classic Tower, Navaratan Complex, Bhuwana, Udaipur (Raj), 313001.<br>Contact email - proptionfintech@gmail.com
+
 
 ## Contact Information
 
-- **Email**: For any queries or support, please reach out to us at [support@stockalpha.in](mailto:support@stockalpha.in). We strive to respond within 24-48 business hours.
-- **Phone**: You can contact us at [+91 6350158902](tel:+916350158902) for immediate assistance during our business hours:
-  - **Monday to Friday**: 9:00 AM to 6:00 PM (IST)
-  - **Saturday**: 10:00 AM to 2:00 PM (IST)
-- **Address**: For any correspondence or visits, our office is located at: **803, Classic Tower, Navratan Complex, Udaipur (Raj), 313001**
+- **Email**: For any queries or support, please reach out to us at [AmazeAlgos@gmail.com](mailto:AmazeAlgos@gmail.com). We strive to respond within 24-48 business hours.
+
 
 ## How We Handle Inquiries
 
@@ -27,6 +24,6 @@ Our team works diligently to address all requests. You can expect a response wit
 
 Your feedback is important to us! If you have suggestions or concerns about our products or services, please feel free to contact us at the provided email or phone number.
 
-Thank you for choosing StockAlpha!
+Thank you for choosing amazealgos.com!
 
-For more information, visit our website at [www.stockalpha.in](https://stockalpha.in).
+For more information, visit our website at [www.amazealgos.com](https://amazealgos.com).
