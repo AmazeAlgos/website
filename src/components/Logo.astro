@@ -1,0 +1,11 @@
+---
+import { SITE } from 'astrowind:config';
+import logoSvg from '~/assets/logo.svg';
+---
+
+<span
+  class="self-center inline-flex items-center gap-1 ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+>
+  <img src={logoSvg.src} alt="Logo" class="w-6 h-6" />
+  {SITE?.name}
+</span>
