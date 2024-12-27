@@ -1,5 +1,5 @@
-# Stock Alpha
+# Amaze Algos
 
 Unlock the power of options trading with data-driven precision.
 
-https://stockalpha.in
+https://www.amazealgos.com
