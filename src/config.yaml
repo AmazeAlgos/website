@@ -1,6 +1,6 @@
 site:
-  name: Stock Alpha
-  site: 'https://stockalpha.in'
+  name: Amazealgos 
+  site: 'https://www.amazealgos.com'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Stock Alpha
-    template: '%s — Stock Alpha'
+    default: Amaze Algos
+    template: '%s — Amaze Algos'
   description: 'Unlock the power of options trading with data-driven precision.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Stock Alpha
+    site_name: Amaze Algos
     images:
       - url: '~/assets/images/og.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@stockalpha.in'
-    site: '@stockalpha.in'
+    handle: '@amazealgos'
+    site: '@amazealgos.com'
     cardType: summary_large_image
 
 i18n:
